@@ -1,6 +1,6 @@
 {
   "name": "pmrs-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PMRS API with Supabase and Vercel",
   "main": "api/index.js",
   "type": "module",
