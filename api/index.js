@@ -82,21 +82,6 @@ async function requireAuth(req, res, next) {
   next();
 }
 
-// ============= ROOT ENDPOINT =============
-
-app.get('/', (req, res) => {
-  res.json({ 
-    message: 'Welcome to PMRS API',
-    status: 'running',
-    version: '1.0.0',
-    endpoints: {
-      health: '/api/health',
-      register: 'POST /api/register',
-      login: 'POST /api/login'
-    }
-  });
-});
-
 // ============= HEALTH CHECK =============
 
 app.get('/api/health', (req, res) => {
