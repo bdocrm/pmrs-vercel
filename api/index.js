@@ -17,6 +17,11 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static('.')); // Serve static files
 
+// Root route - serve index.html
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: '.' });
+});
+
 // Supabase client
 const supabase = createClient(
   process.env.SUPABASE_URL,
